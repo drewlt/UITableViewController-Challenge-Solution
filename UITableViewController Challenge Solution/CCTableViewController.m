@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Code Coalition. All rights reserved.
 //
 
-#import "CCViewController.h"
+#import "CCTableViewController.h"
 
-@interface CCViewController ()
+@interface CCTableViewController ()
 
 @end
 
-@implementation CCViewController
+@implementation CCTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -70,10 +70,13 @@
     // Configure the cell...
     if (indexPath.section == 0) {
         cell.textLabel.text = @"I am in section 0";
+        cell.backgroundColor = [UIColor redColor];
     } else if (indexPath.section == 1) {
         cell.textLabel.text = @"another section";
+        cell.backgroundColor = [UIColor blueColor];
     } else {
         cell.textLabel.text = [NSString stringWithFormat:@"cell %i",indexPath.row];
+        cell.backgroundColor = [UIColor yellowColor];
     }
     
     return cell;
